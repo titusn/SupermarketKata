@@ -54,17 +54,17 @@ Pasta sauce
   3 x 2,17                EUR  6,51
   buy 3 for 5,00          EUR -1,51
 Macaroni                  EUR  0,98
-Fa Shampoo                EUR  2,99
+Bla Shampoo                EUR  2,99
   Fa discount 30%         EUR -0,67
-Fa Soap
+Bla Soap
   2 x 1,50                EUR  3,00
   Fa discount 30%         EUR -0,67
-Axe Fresh Deo             EUR  4,20
-  Axe 3 for 9,00          EUR -1,30
-Axe Shower Gel            EUR  4,99
-  Axe 3 for 9,00          EUR -1,55
-Axe Power Plus            EUR  3,99
-  Axe 3 for 9,00          EUR -1,24
+Ack Fresh Deo             EUR  4,20
+  Ack 3 for 9,00          EUR -1,30
+Ack Shower Gel            EUR  4,99
+  Ack 3 for 9,00          EUR -1,55
+Ack Power Plus            EUR  3,99
+  Ack 3 for 9,00          EUR -1,24
 
 
 TOTAL                     EUR 32,54 
