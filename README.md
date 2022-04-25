@@ -1,6 +1,6 @@
 TODO
 
-CART
+SHOPPING CART
 - A new shopping cart has 0 items
 - After adding an item, shopping cart contains 1 item
 - After removing the item, shopping cart is empty
