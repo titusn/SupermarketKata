@@ -1,7 +1,13 @@
 package com.titusnachbauer.supermarket;
 
 public class ShoppingCart {
+    private int count = 0;
+
     public int itemCount() {
-        return 0;
+        return count;
+    }
+
+    public void add(Item item) {
+        count = 1;
     }
 }
