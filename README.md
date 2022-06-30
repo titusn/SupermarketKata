@@ -8,7 +8,7 @@ SHOPPING CART
 
 PRICE
 - When shopping cart contains 1 item, total price is price of that item
-- When shopping cart contains more items, total price is sum of items
+- When shopping cart contains more items, total price is sum of items' price
 
 RECEIPT
 - When printing the receipt, show a list of items and their price
