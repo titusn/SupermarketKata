@@ -4,7 +4,7 @@ SHOPPING CART
 - A new shopping cart has 0 items
 - After adding an item, shopping cart contains 1 item
 - After removing the item, shopping cart is empty
-- When trying to remove items from empty shopping cart, throw an error
+- When trying to remove an item from empty shopping cart, throw an error
 
 PRICE
 - When shopping cart contains 1 item, total price is price of that item
