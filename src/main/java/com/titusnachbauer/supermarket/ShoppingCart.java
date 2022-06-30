@@ -9,7 +9,7 @@ public class ShoppingCart {
     }
 
     public void add(Item item) {
-        count = 1;
+        count += 1;
         this.item = item;
     }
 

@@ -3,6 +3,7 @@ package com.titusnachbauer.supermarket;
 import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
@@ -32,7 +33,7 @@ class ShoppingCartTest {
         assertThat(cart.isEmpty(), equalTo(false));
     }
 
-        @Test
+    @Test
     void GivenShoppingCartWith1ItemWhenRemoving1ItemCartShouldBeEmpty() {
         Item item = new Item();
         cart.add(item);
@@ -53,6 +54,13 @@ class ShoppingCartTest {
         Item item = new Item(2.00);
         cart.add(item);
         assertThat(cart.totalPrice(), equalTo(2.00));
+    }
+
+    @Test
+    void GivenEmptyShoppingCartWhenAddingTwoItemCountShouldBe2(){
+        cart.add(new Item());
+        cart.add(new Item());
+        assertEquals(2, cart.itemCount());
     }
 
 }
