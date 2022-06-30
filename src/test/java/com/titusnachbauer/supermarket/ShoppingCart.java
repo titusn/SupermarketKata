@@ -10,4 +10,8 @@ public class ShoppingCart {
     public void add(Item item) {
         count = 1;
     }
+
+    public void remove(Item item) {
+        count = 0;
+    }
 }

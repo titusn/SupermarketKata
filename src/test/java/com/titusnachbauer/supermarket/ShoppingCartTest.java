@@ -17,4 +17,12 @@ class ShoppingCartTest {
         cart.add(new Item());
         assertThat(cart.itemCount(), equalTo(1));
     }
+
+    @Test
+    void GivenShoppingCartWith1ItemWhenRemoving1ItemCartShouldBeEmpty() {
+        Item item = new Item();
+        cart.add(item);
+        cart.remove(item);
+        assertThat(cart.itemCount(), equalTo(0));
+    }
 }
