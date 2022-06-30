@@ -6,8 +6,6 @@ import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-
-
 class ShoppingCartTest {
     private ShoppingCart cart = new ShoppingCart();
 
@@ -45,8 +43,7 @@ class ShoppingCartTest {
     void GivenEmptyShoppingCartWhenRemoving1ItemCartShouldThrowException() {
         assertThrows(
                 ShoppingCart.Underflow.class,
-                () -> cart.remove(new Item())
-        );
+                () -> cart.remove(new Item()));
     }
 
     @Test
@@ -57,10 +54,17 @@ class ShoppingCartTest {
     }
 
     @Test
-    void GivenEmptyShoppingCartWhenAddingTwoItemCountShouldBe2(){
+    void GivenEmptyShoppingCartWhenAddingTwoItemCountShouldBe2() {
         cart.add(new Item());
         cart.add(new Item());
         assertEquals(2, cart.itemCount());
+    }
+
+    @Test
+    void GivenAShoppingCartWithTwoItemsWhenCalculatingPriceThenTotalShouldBeSumOfTheItemsPrices() {
+        cart.add(new Item(1.00));
+        cart.add(new Item(2.00));
+        assertEquals(3.00, cart.totalPrice());
     }
 
 }
