@@ -2,6 +2,7 @@ package com.titusnachbauer.supermarket;
 
 public class ShoppingCart {
     private int count = 0;
+    private Item item;
 
     public int itemCount() {
         return count;
@@ -9,6 +10,7 @@ public class ShoppingCart {
 
     public void add(Item item) {
         count = 1;
+        this.item = item;
     }
 
     public void remove(Item item) {
@@ -20,6 +22,10 @@ public class ShoppingCart {
 
     public boolean isEmpty() {
         return count == 0;
+    }
+
+    public double totalPrice() {
+        return item.getPrice();
     }
 
     class Underflow extends RuntimeException {

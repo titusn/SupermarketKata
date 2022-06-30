@@ -48,4 +48,11 @@ class ShoppingCartTest {
         );
     }
 
+    @Test
+    void GivenShoppingCartWith1ItemWhenCalculatingPriceThenTotalShouldBePriceOfItem() {
+        Item item = new Item(2.00);
+        cart.add(item);
+        assertThat(cart.totalPrice(), equalTo(2.00));
+    }
+
 }
