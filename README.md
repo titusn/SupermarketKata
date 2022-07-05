@@ -7,7 +7,7 @@ SHOPPING CART
 - When trying to remove an item from empty shopping cart, throw an error
 
 PRICE
-+ When shopping cart contains 1 item, total price is price of that item
+- When shopping cart contains 1 item, total price is price of that item
 - When shopping cart contains more items, total price is sum of items' price
 
 RECEIPT
