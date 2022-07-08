@@ -1,7 +1,5 @@
 package com.titusnachbauer.supermarket;
 
-import java.math.BigDecimal;
-
 public class Item {
     private final Money moneyPrice;
 
@@ -15,10 +13,6 @@ public class Item {
 
     public Item(Money money) {
         moneyPrice = money;
-    }
-
-    public BigDecimal getPriceBigDecimal() {
-        return moneyPrice.getBigDecimalAmount();
     }
 
     public Money getMoneyPrice() {
