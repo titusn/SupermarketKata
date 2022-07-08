@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 
 public class ShoppingCart {
     private int count = 0;
-    private BigDecimal totalPriceBigDecimal = BigDecimal.valueOf(0.00);
     private Money totalPrice = new Money(BigDecimal.valueOf(0.00));
 
     public String generateReceipt() {
@@ -17,7 +16,6 @@ public class ShoppingCart {
 
     public void add(Item item) {
         count += 1;
-        totalPriceBigDecimal = totalPriceBigDecimal.add(item.getPriceBigDecimal());
         totalPrice = totalPrice.add(item.getMoneyPrice());
     }
 
@@ -33,7 +31,7 @@ public class ShoppingCart {
     }
 
     public Money getTotalPriceMoney() {
-        return new Money(totalPriceBigDecimal);
+        return totalPrice;
     }
 
     class Underflow extends RuntimeException {
