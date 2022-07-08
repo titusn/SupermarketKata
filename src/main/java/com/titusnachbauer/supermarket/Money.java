@@ -14,6 +14,10 @@ public class Money {
         this.bigDecimalAmount = amount;
     }
 
+    public Money() {
+        this(BigDecimal.ZERO);
+    }
+
     public BigDecimal getBigDecimalAmount() {
         return bigDecimalAmount;
     }
@@ -33,5 +37,9 @@ public class Money {
     @Override
     public int hashCode() {
         return Objects.hash(getBigDecimalAmount());
+    }
+
+    public Money add(Money money) {
+        return new Money(getBigDecimalAmount().add(money.getBigDecimalAmount()));
     }
 }
