@@ -1,5 +1,7 @@
 package com.titusnachbauer.supermarket;
 
+import java.math.BigDecimal;
+
 public class Item {
     private final Money moneyPrice;
 
@@ -13,5 +15,9 @@ public class Item {
 
     public double getPrice() {
         return moneyPrice.getAmount();
+    }
+
+    public BigDecimal getPriceBigDecimal() {
+        return moneyPrice.getBigDecimalAmount();
     }
 }

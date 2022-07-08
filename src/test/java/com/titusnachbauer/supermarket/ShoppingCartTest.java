@@ -1,6 +1,9 @@
 package com.titusnachbauer.supermarket;
 
 import org.junit.jupiter.api.Test;
+
+import java.math.BigDecimal;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -51,6 +54,13 @@ class ShoppingCartTest {
         Item item = new Item(2.00);
         cart.add(item);
         assertThat(cart.totalPrice(), equalTo(2.00));
+    }
+
+    @Test
+    void GivenShoppingCartWith1ItemWhenCalculatingPriceThenTotalShouldBePriceOfItemAsBigDecimal() {
+        Item item = new Item(2.00);
+        cart.add(item);
+        assertThat(cart.getTotalPriceBigDecimal(), equalTo(BigDecimal.valueOf(2.00)));
     }
 
     @Test
