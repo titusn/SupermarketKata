@@ -13,6 +13,10 @@ public class Item {
         this(0.00);
     }
 
+    public Item(Money money) {
+        moneyPrice = money;
+    }
+
     public BigDecimal getPriceBigDecimal() {
         return moneyPrice.getBigDecimalAmount();
     }
