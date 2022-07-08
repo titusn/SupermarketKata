@@ -13,7 +13,7 @@ class ShoppingCartTest {
     private ShoppingCart cart = new ShoppingCart();
 
     @Test
-    void GivenNewShoppingCartWhenCountingItemsThenCountShouldBe0() {
+    void GivenNewShoppingCartWhenCountingItemsThenCountShouldBeZero() {
         assertThat(cart.itemCount(), equalTo(0));
     }
 
@@ -23,7 +23,7 @@ class ShoppingCartTest {
     }
 
     @Test
-    void GivenEmptyShoppingCartWhenAddingItemThenCountShouldBe1() {
+    void GivenEmptyShoppingCartWhenAddingItemThenCountShouldBeOne() {
         cart.add(new Item());
         assertThat(cart.itemCount(), equalTo(1));
     }
@@ -35,7 +35,7 @@ class ShoppingCartTest {
     }
 
     @Test
-    void GivenShoppingCartWith1ItemWhenRemoving1ItemCartShouldBeEmpty() {
+    void GivenShoppingCartWithOneItemWhenRemoving1ItemCartShouldBeEmpty() {
         Item item = new Item();
         cart.add(item);
         cart.remove(item);
@@ -43,21 +43,21 @@ class ShoppingCartTest {
     }
 
     @Test
-    void GivenEmptyShoppingCartWhenRemoving1ItemCartShouldThrowException() {
+    void GivenEmptyShoppingCartWhenRemovingOneItemCartShouldThrowException() {
         assertThrows(
                 ShoppingCart.Underflow.class,
                 () -> cart.remove(new Item()));
     }
 
     @Test
-    void GivenShoppingCartWith1ItemWhenCalculatingPriceThenTotalShouldBePriceOfItemAsMoney() {
+    void GivenShoppingCartWithOneItemWhenCalculatingPriceThenTotalShouldBePriceOfItemAsMoney() {
         Item item = new Item(new Money(2.00));
         cart.add(item);
         assertThat(cart.getTotalPrice(), equalTo(new Money(BigDecimal.valueOf(2.00))));
     }
 
     @Test
-    void GivenEmptyShoppingCartWhenAddingTwoItemCountShouldBe2() {
+    void GivenEmptyShoppingCartWhenAddingTwoItemCountShouldBeTwo() {
         cart.add(new Item());
         cart.add(new Item());
         assertEquals(2, cart.itemCount());
