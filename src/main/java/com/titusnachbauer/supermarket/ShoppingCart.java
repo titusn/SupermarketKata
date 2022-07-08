@@ -30,7 +30,7 @@ public class ShoppingCart {
         return count == 0;
     }
 
-    public Money getTotalPriceMoney() {
+    public Money getTotalPrice() {
         return totalPrice;
     }
 
