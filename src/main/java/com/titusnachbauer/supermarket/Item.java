@@ -16,4 +16,8 @@ public class Item {
     public BigDecimal getPriceBigDecimal() {
         return moneyPrice.getBigDecimalAmount();
     }
+
+    public Money getMoneyPrice() {
+        return moneyPrice;
+    }
 }
