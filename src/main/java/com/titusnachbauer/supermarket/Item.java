@@ -13,10 +13,6 @@ public class Item {
         this(0.00);
     }
 
-    public double getPrice() {
-        return moneyPrice.getAmount();
-    }
-
     public BigDecimal getPriceBigDecimal() {
         return moneyPrice.getBigDecimalAmount();
     }
