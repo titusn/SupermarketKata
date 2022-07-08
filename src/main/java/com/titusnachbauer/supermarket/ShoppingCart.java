@@ -16,7 +16,6 @@ public class ShoppingCart {
 
     public void add(Item item) {
         count += 1;
-        totalPrice += item.getPrice();
         totalPriceBigDecimal = totalPriceBigDecimal.add(item.getPriceBigDecimal());
     }
 
