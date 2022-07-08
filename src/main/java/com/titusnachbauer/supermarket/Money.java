@@ -10,6 +10,10 @@ public class Money {
         this.bigDecimalAmount = BigDecimal.valueOf(amount);
     }
 
+    public Money(BigDecimal amount) {
+        this.bigDecimalAmount = amount;
+    }
+
     public BigDecimal getBigDecimalAmount() {
         return bigDecimalAmount;
     }

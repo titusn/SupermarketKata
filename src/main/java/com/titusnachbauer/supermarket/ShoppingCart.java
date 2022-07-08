@@ -34,6 +34,10 @@ public class ShoppingCart {
         return totalPriceBigDecimal;
     }
 
+    public Money getTotalPriceMoney() {
+        return new Money(totalPriceBigDecimal);
+    }
+
     class Underflow extends RuntimeException {
     }
 }
