@@ -10,6 +10,6 @@ class ItemTest {
     @Test
     void GivenItemWhenAskedForPriceThenItReturnsPriceAsMoney() {
         Item item = new Item(new Money(1.00));
-        assertThat(item.getMoneyPrice(), equalTo(new Money(1.00)));
+        assertThat(item.getPrice(), equalTo(new Money(1.00)));
     }
 }

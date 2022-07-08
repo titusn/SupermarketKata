@@ -1,17 +1,17 @@
 package com.titusnachbauer.supermarket;
 
 public class Item {
-    private final Money moneyPrice;
+    private final Money price;
 
     public Item() {
         this(new Money(0.00));
     }
 
     public Item(Money money) {
-        moneyPrice = money;
+        price = money;
     }
 
-    public Money getMoneyPrice() {
-        return moneyPrice;
+    public Money getPrice() {
+        return price;
     }
 }

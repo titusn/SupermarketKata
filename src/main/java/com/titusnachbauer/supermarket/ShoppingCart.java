@@ -16,7 +16,7 @@ public class ShoppingCart {
 
     public void add(Item item) {
         count += 1;
-        totalPrice = totalPrice.add(item.getMoneyPrice());
+        totalPrice = totalPrice.add(item.getPrice());
     }
 
     public void remove(Item item) {
