@@ -19,4 +19,10 @@ class MoneyTest {
         Money money = new Money(BigDecimal.valueOf(2));
         assertThat(money.add(new Money(BigDecimal.valueOf(2))), equalTo(new Money(BigDecimal.valueOf(4))));
     }
+
+    @Test
+    void GivenMoneyAmountTenWhenConvertingToStringThenShouldBeTenAsString() {
+        Money money = new Money(10);
+        assertThat(money.toString(), equalTo("10.0"));
+    }
 }

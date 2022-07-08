@@ -42,4 +42,9 @@ public class Money {
     public Money add(Money money) {
         return new Money(getBigDecimalAmount().add(money.getBigDecimalAmount()));
     }
+
+    @Override
+    public String toString() {
+        return getBigDecimalAmount().toString();
+    }
 }

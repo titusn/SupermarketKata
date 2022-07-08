@@ -12,4 +12,10 @@ class ItemTest {
         Item item = new Item(new Money(1.00));
         assertThat(item.getPrice(), equalTo(new Money(1.00)));
     }
+
+    @Test
+    void GivenItemWhenConvertingToStringThenShouldContainNameAndPrice() {
+        Item item = new Item("Apple", new Money(0.15));
+        assertThat(item.toString(), equalTo("Apple                     EUR  0,15"));
+    }
 }
