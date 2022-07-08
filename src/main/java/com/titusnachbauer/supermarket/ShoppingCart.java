@@ -30,10 +30,6 @@ public class ShoppingCart {
         return count == 0;
     }
 
-    public BigDecimal getTotalPriceBigDecimal() {
-        return totalPriceBigDecimal;
-    }
-
     public Money getTotalPriceMoney() {
         return new Money(totalPriceBigDecimal);
     }
