@@ -77,4 +77,10 @@ class ShoppingCartTest {
         assertEquals(3.00, cart.totalPrice());
     }
 
+    @Test
+    void GivenAShoppingCartWithTwoItemsWhenCalculatingPriceThenTotalShouldBeSumOfTheItemsPricesBigDecimal() {
+        cart.add(new Item(1.00));
+        cart.add(new Item(2.00));
+        assertThat(cart.getTotalPriceBigDecimal(), equalTo(BigDecimal.valueOf(3.00)));
+    }
 }
