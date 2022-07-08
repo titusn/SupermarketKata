@@ -1,10 +1,10 @@
 package com.titusnachbauer.supermarket;
 
 public class Item {
-    private final double price;
+    private final Money moneyPrice;
 
     public Item(double price) {
-        this.price = price;
+        this.moneyPrice = new Money(price);
     }
 
     public Item() {
@@ -12,6 +12,6 @@ public class Item {
     }
 
     public double getPrice() {
-        return price;
+        return moneyPrice.getAmount();
     }
 }
