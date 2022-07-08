@@ -4,6 +4,10 @@ public class ShoppingCart {
     private int count = 0;
     private double totalPrice = 0;
 
+    public String generateReceipt() {
+        return "TOTAL                     EUR  0,00";
+    }
+
     public int itemCount() {
         return count;
     }
