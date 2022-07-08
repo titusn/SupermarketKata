@@ -69,4 +69,34 @@ class ShoppingCartTest {
         cart.add(new Item(new Money(2.00)));
         assertThat(cart.getTotalPrice(), equalTo(new Money(3.00)));
     }
+
+    @Test
+    void GivenAShoppingCartWithTwoItemsWhenRemovingOneItemThenCartShouldContainOneItem() {
+        cart.add(new Item(new Money(4.00)));
+        Item item = new Item(new Money(5.00));
+        cart.add(item);
+        cart.remove(item);
+        assertThat(cart.itemCount(), equalTo(1));
+    }
+
+    @Test
+    void GivenAShoppingCartWithTwoItemsWhenRemovingOneItemThenCartShouldContainOtherItem() {
+        Item first = new Item(new Money(4.00));
+        cart.add(first);
+        Item second = new Item(new Money(5.00));
+        cart.add(second);
+        cart.remove(second);
+        assertThat(cart.contains(first), equalTo(true));
+    }
+
+    @Test
+    void GivenAShoppingCartWithTwoItemsWhenRemovingOneItemThenCartShouldNotContainRemovedItem() {
+        Item first = new Item(new Money(4.00));
+        cart.add(first);
+        Item second = new Item(new Money(5.00));
+        cart.add(second);
+        cart.remove(second);
+        assertThat(cart.contains(second), equalTo(false));
+    }
 }
+

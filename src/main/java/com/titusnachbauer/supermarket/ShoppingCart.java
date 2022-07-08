@@ -1,9 +1,12 @@
 package com.titusnachbauer.supermarket;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ShoppingCart {
     private int count = 0;
+    private final List<Item> items = new ArrayList<>();
     private Money totalPrice = new Money(BigDecimal.valueOf(0.00));
 
     public String generateReceipt() {
@@ -17,13 +20,15 @@ public class ShoppingCart {
     public void add(Item item) {
         count += 1;
         totalPrice = totalPrice.add(item.getPrice());
+        items.add(item);
     }
 
     public void remove(Item item) {
         if (isEmpty()) {
             throw new Underflow();
         }
-        count = 0;
+        items.remove(item);
+        count--;
     }
 
     public boolean isEmpty() {
@@ -32,6 +37,10 @@ public class ShoppingCart {
 
     public Money getTotalPrice() {
         return totalPrice;
+    }
+
+    public boolean contains(Item item) {
+        return items.contains(item);
     }
 
     class Underflow extends RuntimeException {
