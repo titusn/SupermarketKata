@@ -51,7 +51,7 @@ class ShoppingCartTest {
 
     @Test
     void GivenShoppingCartWith1ItemWhenCalculatingPriceThenTotalShouldBePriceOfItemAsMoney() {
-        Item item = new Item(2.00);
+        Item item = new Item(new Money(2.00));
         cart.add(item);
         assertThat(cart.getTotalPrice(), equalTo(new Money(BigDecimal.valueOf(2.00))));
     }
@@ -65,8 +65,8 @@ class ShoppingCartTest {
 
     @Test
     void GivenAShoppingCartWithTwoItemsWhenCalculatingPriceThenTotalShouldBeSumOfTheItemsPricesAsMoney() {
-        cart.add(new Item(1.00));
-        cart.add(new Item(2.00));
-        assertThat(cart.getTotalPrice(), equalTo(new Money(BigDecimal.valueOf(3.00))));
+        cart.add(new Item(new Money(1.00)));
+        cart.add(new Item(new Money(2.00)));
+        assertThat(cart.getTotalPrice(), equalTo(new Money(3.00)));
     }
 }
