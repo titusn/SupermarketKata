@@ -6,7 +6,7 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 
 public class Money {
-    private final BigDecimal amount;
+    private BigDecimal amount;
 
     public Money(double amount) {
         this.amount = BigDecimal.valueOf(amount);
@@ -24,4 +24,7 @@ public class Money {
         return df.format(amount.doubleValue());
     }
 
+    public void add(Money more_money) {
+        amount = getAmount().add(more_money.getAmount());
+    }
 }
