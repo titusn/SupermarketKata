@@ -11,13 +11,13 @@ public class MoneyTest {
     @Test
     void GivenNewMoneyWhenGettingValueThenReturnsValue() {
         Money money = new Money(42.00);
-        assertThat(money.getAmount(), equalTo(BigDecimal.valueOf(42)));
+        assertThat(money.getAmount(), equalTo(BigDecimal.valueOf(42.00)));
     }
 
     @Test
     void GivenNewMoneyWhenGettingValueThenReturnsStringValue() {
         Money money = new Money(42.00);
-        assertThat(money.toString(), equalTo("42.00"));
+        assertThat(money.toString(), equalTo("42,00"));
     }
 
     // @Test
