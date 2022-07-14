@@ -20,6 +20,7 @@ public class Money {
         DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(Locale.GERMAN);
         DecimalFormat df = new DecimalFormat("#.##", otherSymbols);
         df.setMinimumFractionDigits(2);
+        df.setMaximumFractionDigits(2);
         return df.format(amount.doubleValue());
     }
 
