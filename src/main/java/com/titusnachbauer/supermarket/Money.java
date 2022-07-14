@@ -7,6 +7,11 @@ import java.text.DecimalFormatSymbols;
 
 public class Money {
     private BigDecimal amount;
+    static final private BigDecimal three = BigDecimal.valueOf(3.00);
+
+    static public double getThree() {
+        return three.doubleValue();
+    }
 
     public Money(double amount) {
         this.amount = BigDecimal.valueOf(amount);

@@ -62,9 +62,8 @@ class ShoppingCartTest {
 
     @Test
     void GivenAShoppingCartWithTwoItemsWhenCalculatingPriceThenTotalShouldBeSumOfTheItemsPrices() {
-        cart.add(new Item(1.00));
-        cart.add(new Item(2.00));
-        assertEquals(3.00, cart.totalPrice());
+        cart.add(new Item(new Money(1.00)));
+        cart.add(new Item(new Money(2.00)));
+        assertEquals(Money.getThree(), cart.totalPrice());
     }
-
 }
