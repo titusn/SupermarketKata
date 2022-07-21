@@ -54,7 +54,7 @@ class ShoppingCartTest {
     }
 
     @Test
-    void GivenEmptyShoppingCartWhenAddingTwoItemCountShouldBe2() {
+    void GivenEmptyShoppingCartWhenAddingTwoItemCountShouldBeTwo() {
         cart.add(new Item());
         cart.add(new Item());
         assertEquals(2, cart.itemCount());
