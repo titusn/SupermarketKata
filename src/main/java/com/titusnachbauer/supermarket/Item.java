@@ -18,7 +18,11 @@ public class Item {
     }
 
     public Item(String name, double price) {
-        this.price = new Money(price);
+        Item(name, new Money(price))
+    }
+
+    public Item(String name, Money price) {
+        this.price = price;
         this.name = name;
     }
 
