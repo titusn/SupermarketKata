@@ -18,7 +18,7 @@ public class Item {
     }
 
     public Item(String name, double price) {
-        Item(name, new Money(price))
+        Item(name, new Money(price));
     }
 
     public Item(String name, Money price) {
