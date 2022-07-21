@@ -89,4 +89,14 @@ class ShoppingCartTest {
         assertEquals(expected, cart.toString());
     }
 
+    @Test
+    void GivenAReceiptTheLastLineShouldContainTheTotalPrice(){
+        cart.add(new Item("One", 1.00));
+        cart.add(new Item("Two", 2.00));
+        String expected = """
+        One 1,00
+        Two 2,00
+        TOTAL 3,00""";
+        assertEquals(expected, cart.generateReceipt());
+    }
 }

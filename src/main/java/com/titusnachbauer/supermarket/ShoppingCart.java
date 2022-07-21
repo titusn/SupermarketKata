@@ -34,6 +34,11 @@ public class ShoppingCart {
         return totalPrice;
     }
 
+    public String generateReceipt() {
+        String receipt = this.toString();
+        return receipt + "TOTAL " + new Money(this.totalPrice).toString();
+    }
+
     class Underflow extends RuntimeException {
     }
 
@@ -42,7 +47,7 @@ public class ShoppingCart {
         StringBuilder sb = new StringBuilder();
 
         for (Item item : items) {
-            sb.append(item.getName() + " " + item.getAmount().toString() + "\n");            
+            sb.append(item.getName()).append(" ").append(item.getAmount().toString()).append("\n");
         }
         return sb.toString();
     }
