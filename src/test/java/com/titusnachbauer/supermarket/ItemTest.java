@@ -12,4 +12,17 @@ class ItemTest {
         Item item = new Item(1.00);
         assertThat(item.getPrice(), equalTo(1.00));
     }
+
+    @Test
+    void GivenNewItemWhenAskedForNameThenReturnItsName() {
+        Item item = new Item("Baseball", 1.00);
+        assertThat(item.getName(), equalTo("Baseball"));
+    }
+
+    @Test
+    void GivenDifferentItemWhenAskedForNameThenReturnName() {
+        Item item = new Item("Plant", 15.00);
+        assertThat(item.getName(), equalTo("Plant"));
+    }
+
 }
