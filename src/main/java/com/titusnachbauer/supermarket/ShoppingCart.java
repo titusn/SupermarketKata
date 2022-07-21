@@ -1,8 +1,13 @@
 package com.titusnachbauer.supermarket;
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class ShoppingCart {
     private int count = 0;
     private double totalPrice = 0;
+    private List<Item> items = new ArrayList<>();
+
 
     public int itemCount() {
         return count;
@@ -11,6 +16,7 @@ public class ShoppingCart {
     public void add(Item item) {
         count += 1;
         totalPrice += item.getPrice();
+        items.add(item);
     }
 
     public void remove(Item item) {
@@ -33,9 +39,11 @@ public class ShoppingCart {
 
     @Override
     public String toString(){
-        return """ 
-            Baseball 5,00
-            Baseball bat 15,00
-                    """;
+        StringBuilder sb = new StringBuilder();
+
+        for (Item item : items) {
+            sb.append(item.getName() + " " + item.getAmount().toString() + "\n");            
+        }
+        return sb.toString();
     }
 }

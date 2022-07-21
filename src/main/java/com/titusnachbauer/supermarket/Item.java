@@ -32,4 +32,8 @@ public class Item {
     public String getName() {
         return name;
     }
+
+    public Money getAmount() {
+        return price;
+    }
 }
