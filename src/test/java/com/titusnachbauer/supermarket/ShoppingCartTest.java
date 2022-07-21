@@ -66,4 +66,17 @@ class ShoppingCartTest {
         cart.add(new Item(new Money(2.00)));
         assertEquals(Money.getThree(), cart.totalPrice());
     }
+
+    @Test
+    void GivenShoppingCartWithTwoItemsShouldPrintTheReceiptList(){
+        cart.add(new Item("Baseball",5.00));
+        cart.add(new Item("Baseball bat",15.00));
+        String expected=""" 
+        Baseball 5,00
+        Baseball bat 15,00
+        """;
+        assertEquals(expected, cart.toString());
+    }
+
+
 }

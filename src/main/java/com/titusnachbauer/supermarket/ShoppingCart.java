@@ -30,4 +30,12 @@ public class ShoppingCart {
 
     class Underflow extends RuntimeException {
     }
+
+    @Override
+    public String toString(){
+        return """ 
+            Baseball 5,00
+            Baseball bat 15,00
+                    """;
+    }
 }
