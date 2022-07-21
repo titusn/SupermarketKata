@@ -5,8 +5,7 @@ public class Item {
     private final String name;
 
     public Item(Money price) {
-        this.price = price;
-        this.name = "";
+        this("", price);
     }
 
     public Item(double price) {
